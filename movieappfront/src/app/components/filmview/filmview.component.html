@@ -1,0 +1,12 @@
+<div class="rechercher">
+    <input type="text" ngModel=[(moviename)]/>
+    <button type="button" class="btn btn-primary"  >Rechercher</button>
+  </div>
+<div class="container">
+    <div class="row">
+        <div class="movies card-group">
+        <app-film-item *ngFor="let film of films" [film]=film></app-film-item>
+    </div>
+    </div>
+  </div>
+  

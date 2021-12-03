@@ -1,0 +1,33 @@
+<div class="detail">
+    
+    <img class="imgposter" src="{{(film.poster_path)}}" />
+    <div class="details">
+       
+        <p>( {{film.original_title}} )</p>
+   
+            <p class="rating" >{{film.vote_average}}</p>
+            <p class="date">{{film.release_date}}</p>
+        <p class="description">{{film.overview}}</p>
+    </div>
+</div>
+
+
+
+<div class="search-container">
+    <form action="search-form" #form ="ngForm" (ngSubmit)="OnSubmit()" >
+       
+
+        <input type="text" class="search-input" name="contenu" ngModel [(ngModel)]="contenu" placeholder="Your Comment" >
+        <button class="search-button" >Send</button>
+    </form>
+
+ 
+</div>
+
+<div>
+    <h2>Liste Commentaires</h2>
+    <app-commentaire *ngFor="let commentaire of commentaires" [commentaire]=commentaire>
+        <div>{{commentaire.contenu}}</div>
+    </app-commentaire>
+</div>
+  

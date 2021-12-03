@@ -1,0 +1,7 @@
+
+  <div class="col">
+    <img class="filmimg"  src="{{movieService.getImage(film.poster_path)}} " onClick="penFilmDetails()" alt="imagefilm">
+    <p>{{film.original_title}}</p>
+    <button (click)="addToFavoris(film)" >Ajouter Favoris</button>
+    <i class="bi bi-heart-fill"></i>
+    </div>
