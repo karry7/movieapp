@@ -1,0 +1,21 @@
+.movies{
+    display:flex;
+    margin: 20px;
+}
+.row{
+    
+    margin: 20px;
+}
+
+.rechercher{
+    display: flex;
+    
+}
+
+.header{
+    display:flex;
+    justify-content: space-around;
+}
+.border-double {
+    border: 6px double #9799a7;
+  }

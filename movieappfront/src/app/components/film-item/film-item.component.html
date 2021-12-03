@@ -1,7 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  
 
-  <div class="col">
-    <img class="filmimg"  src="{{movieService.getImage(film.poster_path)}} " onClick="penFilmDetails()" alt="imagefilm">
-    <p>{{film.original_title}}</p>
-    <button (click)="addToFavoris(film)" >Ajouter Favoris</button>
-    <i class="bi bi-heart-fill"></i>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js">
+    <title>Document</title>
+</head>
+<body>
+ 
+<div class="col">
+    <div class="card">
+        <div class="pg">
+            <img class="filmimg"  src="{{movieService.getImage(film.poster_path)}} " alt="imagefilm">
+        </div>
+        <div id="card">
+            <div class="shine"></div>
+            <div class="text-block">
+                <h1>{{film.original_title}} <small>{{film.release_date}}</small></h1>
+          
+                <p>
+                    {{film.overview}}
+                </p>
+                <button class="btn btn-primary" (click)="addToFavoris(film)">Ajouter Favoris</button>
+                <button  class="btn btn-secondary" (click)="openFilmDetails(film.id)" >Plus</button>
+            </div>
+        </div>
     </div>
+</div>
+</body>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Film } from 'src/app/models/film';
 import { MovieService } from 'src/app/movie.service';
 
@@ -10,7 +11,7 @@ import { MovieService } from 'src/app/movie.service';
 export class FilmviewComponent implements OnInit {
   films : Array<Film>=[];
   movieservice: MovieService;
-  constructor(private movieService : MovieService) {
+  constructor(private movieService : MovieService,private router:Router) {
     this.movieservice=movieService;
     this.movieservice.getAllFilms().then(
       (data)=>this.films=data.results
@@ -18,6 +19,9 @@ export class FilmviewComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+  openFavoris() {
+    return this.router.navigate(['/favoris']);
   }
 
 }

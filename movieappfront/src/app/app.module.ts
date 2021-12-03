@@ -10,6 +10,7 @@ import { DetailsComponent } from './components/details/details.component';
 import { FavorisComponent } from './components/favoris/favoris.component';
 import { FormsModule } from '@angular/forms';
 import { CommentaireComponent } from './components/commentaire/commentaire.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CommentaireComponent } from './components/commentaire/commentaire.compo
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule

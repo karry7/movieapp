@@ -25,7 +25,7 @@ export class FilmItemComponent implements OnInit {
     return this.router.navigate(['/details/' + id]);
   }
   
-
+ 
   addToFavoris(film: Film){
     this.movieService.addToFavoris(film)
   }
